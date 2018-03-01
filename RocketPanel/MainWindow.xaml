@@ -15,7 +15,7 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        FontFamily="{DynamicResource MaterialDesignFont}" ResizeMode="NoResize">
     <Grid>
         <dragablz:TabablzControl Margin="0,25,0,0" Background="#FF3E3E42" >
             <dragablz:TabablzControl.InterTabController>
@@ -28,8 +28,9 @@
                             <DockPanel>
                                 <TextBlock xml:space="preserve" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">RocketPanel Ultimate 2018
                &#169;1337 Electronics 2018
-                                                                 Right click a button to program it.
+               Right click a button to program it.                                
                                 </TextBlock>
+                                <Button Name="minimizeBtn" Height="30" UseLayoutRounding="True" Click="MinimizeBtn_OnClick" ToolTip="Minimize to widget">↡</Button>
                                 <materialDesign:Chip Margin="10,10,10,10" Icon="+" Click="Chip_Click" FontSize="8px" VerticalAlignment="Bottom" HorizontalAlignment="Right" IconBackground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Width="33" ></materialDesign:Chip>
                             </DockPanel>
 

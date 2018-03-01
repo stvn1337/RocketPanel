@@ -31,6 +31,7 @@ namespace RocketPanel
         private static TextBox btnName;
         private static ComboBox btnType;
         private static TextBox btnScript;
+        private static DotBtn dot;
 
 
         public MainWindow()
@@ -47,8 +48,16 @@ namespace RocketPanel
             btnType.Items.Add("Application");
             btnType.Items.Add("File");
             btnType.Items.Add("Script");
+            dot = new DotBtn();
+            this.Closing += MainWindow_Closing;
+            
+            
         }
 
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            dot.Close();
+        }
 
         private void Chip_Click(object sender, RoutedEventArgs e)
         {
@@ -245,5 +254,13 @@ namespace RocketPanel
                 btnFileBox.Text = openFileDialog1.FileName;
             }
         }
+
+        private void MinimizeBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            dot.Show();
+        }
+
+
     }
 }

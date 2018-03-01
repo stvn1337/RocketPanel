@@ -1,0 +1,23 @@
+﻿<Window x:Class="RocketPanel.DotBtn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RocketPanel"
+        mc:Ignorable="d"
+        Title="DotBtn" Height="69.302" Width="74.77" Topmost="True" AllowsTransparency="True" ResizeMode="NoResize"  Background="Transparent" WindowStyle="None">
+    <DockPanel Margin="0,0,10,21">
+        <Image Name="image" Source="control-panel.png" Width="59" VerticalAlignment="Top" HorizontalAlignment="Left" Height="66" RenderTransformOrigin="0.5,0.5" Margin="0,-1,0,-4"
+               ToolTip="Right Click to open panel..">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.2"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+
+        </Image>
+    </DockPanel>
+</Window>
