@@ -1,0 +1,79 @@
+﻿<Controls:MetroWindow  x:Class="MaterialPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:MaterialPanel"
+        mc:Ignorable="d"
+        Title="RocketPanel 2018" Height="500" Width="500"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <dragablz:TabablzControl Margin="0,25,0,0" Background="#FF3E3E42" >
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController  />
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem Header="Main" IsSelected="True" Background="LightGray">
+                <StackPanel Margin="5">
+                    <materialDesign:Card>
+                        <StackPanel>
+                            <DockPanel>
+                                <TextBlock xml:space="preserve" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">RocketPanel Ultimate 2018
+               &#169;1337 Electronics 2018
+                                </TextBlock>
+                                <materialDesign:Chip Margin="10,10,10,10" Icon="+" Click="Chip_Click" FontSize="8px" VerticalAlignment="Bottom" HorizontalAlignment="Right" IconBackground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Width="33" ></materialDesign:Chip>
+                            </DockPanel>
+
+                        </StackPanel>
+                    </materialDesign:Card>
+                    <WrapPanel Name="btnPnl1"  HorizontalAlignment="Left" VerticalAlignment="Center" AllowDrop="True">
+                    </WrapPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Options/Tools">
+                <WrapPanel>
+                    <materialDesign:Card Margin="0,5,0,0">
+                        <!--<Button Name="serializeTestBtn" Click="serializeTestBtn_Click" Margin="5">Test Serialization</Button>-->
+                    </materialDesign:Card>
+                </WrapPanel>
+            </TabItem>
+        </dragablz:TabablzControl>
+        
+        <Controls:FlyoutsControl>
+                <Controls:Flyout Name="thisFlyEdit" Width="500" IsEnabled="True" IsOpen="False" ClosingFinished="thisFlyEdit_ClosingFinished" >
+                <StackPanel HorizontalAlignment="Left">
+                    <DockPanel HorizontalAlignment="Left">
+                        <Label>ID:</Label>
+                        <TextBox Margin="28,0,0,0" Name="curBtnIDbox" Width="130" Foreground="Gray" IsReadOnly="True"></TextBox></DockPanel>
+
+                    <DockPanel HorizontalAlignment="Left">
+                        <Label>Name:</Label>
+                        <TextBox Margin="5,0,0,0" Name="btnNameBox" Width="130"></TextBox>
+                    </DockPanel>
+
+                    <DockPanel HorizontalAlignment="Left">
+                        <Label>Type:</Label>
+                        <ComboBox Margin="12,0,0,0" Name="btnTypeBox" Width="130"></ComboBox>
+                    </DockPanel>
+
+                    <DockPanel HorizontalAlignment="Left">
+                        <Label Margin="0,5,0,0">Action/File:</Label>
+                        <TextBox Margin="8,5,0,0" Name="btnFileBox" Width="400" MouseDoubleClick="btnFileBox_MouseDoubleClick"></TextBox>
+                    </DockPanel>
+                    <Separator></Separator>
+                    <Label Foreground="Crimson"  Margin="10">Double click file box to select using explorer.</Label>
+                        <Label Foreground="LawnGreen"  Margin="10">When you return, your settings will update to reflect your changes here.</Label>
+                </StackPanel>
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+
+    </Grid>
+</Controls:MetroWindow>
