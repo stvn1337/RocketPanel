@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data.Sql;
 
-namespace MaterialPanel
+namespace RocketPanel
 {
     public static class toolkit
     {

@@ -17,7 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SWF = System.Windows.Forms;
 
-namespace MaterialPanel
+namespace RocketPanel
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

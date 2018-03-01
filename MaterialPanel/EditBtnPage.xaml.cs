@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MaterialPanel
+namespace RocketPanel
 {
     /// <summary>
     /// Interaction logic for EditBtnPage.xaml

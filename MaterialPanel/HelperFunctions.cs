@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace MaterialPanel
+namespace RocketPanel
 {
     internal static class HelperFunctions
     {
