@@ -28,6 +28,7 @@
                             <DockPanel>
                                 <TextBlock xml:space="preserve" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">RocketPanel Ultimate 2018
                &#169;1337 Electronics 2018
+                                                                 Right click a button to program it.
                                 </TextBlock>
                                 <materialDesign:Chip Margin="10,10,10,10" Icon="+" Click="Chip_Click" FontSize="8px" VerticalAlignment="Bottom" HorizontalAlignment="Right" IconBackground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Width="33" ></materialDesign:Chip>
                             </DockPanel>
