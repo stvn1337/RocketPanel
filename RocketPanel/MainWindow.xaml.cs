@@ -119,7 +119,7 @@ namespace RocketPanel
         {
             ContextMenu mnu = new ContextMenu();
             mnu.Items.Add(getBtnMI("Delete Button", button_HandlerCT));
-            mnu.Items.Add(getBtnMI("Rename Button", button_HandlerCT));
+           // mnu.Items.Add(getBtnMI("Rename Button", button_HandlerCT));
             mnu.Items.Add(getBtnMI("Program Button", button_HandlerCT));
             return mnu;
         }

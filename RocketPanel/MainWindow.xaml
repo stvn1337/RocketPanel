@@ -49,7 +49,7 @@
             </TabItem>
         </dragablz:TabablzControl>
         
-        <Controls:FlyoutsControl>
+        <Controls:FlyoutsControl Margin="10,10,-10,-10">
                 <Controls:Flyout Name="thisFlyEdit" Width="500" IsEnabled="True" IsOpen="False" ClosingFinished="thisFlyEdit_ClosingFinished" >
                 <StackPanel HorizontalAlignment="Left">
                     <DockPanel HorizontalAlignment="Left">

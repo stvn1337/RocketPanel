@@ -62,7 +62,14 @@ namespace RocketPanel
                     SQLiteDataReader r = fmd.ExecuteReader();
                     while (r.Read())
                     {
-                        holder = (string)r["buttonscript"];
+                        try
+                        {
+                            holder = (string) r["buttonscript"];
+                        }
+                        catch (Exception e)
+                        {
+
+                        }
                     }
 
                     connect.Close();
@@ -86,7 +93,14 @@ namespace RocketPanel
                     SQLiteDataReader r = fmd.ExecuteReader();
                     while (r.Read())
                     {
-                        holder = (string)r["buttontype"];
+                        try
+                        {
+                            holder = (string) r["buttontype"];
+                        }
+                        catch (Exception)
+                        {
+
+                        }
                     }
 
                     connect.Close();

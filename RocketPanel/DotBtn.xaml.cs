@@ -16,15 +16,30 @@ namespace RocketPanel
             Image imageHolder = image;
             image.MouseUp += Image_MouseUp;
             this.MouseDown += Window_MouseDown;
+            this.MouseDoubleClick += DotBtn_MouseDoubleClick;
             PlaceLowerRight();
 
+        }
 
+        private void DotBtn_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("");
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            var mouseState = System.Windows.Forms.Control.MousePosition;
             if (e.ChangedButton == MouseButton.Left)
-                this.DragMove();
+            {
+                System.Threading.Thread.Sleep(800);
+                var currentMouseState = System.Windows.Forms.Control.MousePosition;
+                
+                if (e.ButtonState == MouseButtonState.Pressed && mouseState.X + mouseState.Y != currentMouseState.X+currentMouseState.Y)
+                {
+                    this.DragMove();
+                }
+                
+            }
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
