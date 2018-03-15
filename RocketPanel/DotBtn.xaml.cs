@@ -18,6 +18,7 @@ namespace RocketPanel
             this.MouseDown += Window_MouseDown;
             this.MouseDoubleClick += DotBtn_MouseDoubleClick;
             PlaceLowerRight();
+            image.Opacity = 90;
 
         }
 

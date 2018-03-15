@@ -39,6 +39,7 @@ namespace RocketPanel
             btnType.Items.Add("File");
             btnType.Items.Add("Script");
             dot = new DotBtn();
+            
             this.Closing += MainWindow_Closing;
             
             

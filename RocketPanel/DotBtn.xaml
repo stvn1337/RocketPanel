@@ -5,15 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RocketPanel"
         mc:Ignorable="d"
+        
         Title="DotBtn" Height="69.302" Width="74.77" Topmost="True" AllowsTransparency="True" ResizeMode="NoResize"  Background="Transparent" WindowStyle="None">
-    <DockPanel Margin="0,0,10,21">
-        <Image Name="image" Source="control-panel.png" Width="59" VerticalAlignment="Top" HorizontalAlignment="Left" Height="66" RenderTransformOrigin="0.5,0.5" Margin="0,-1,0,-4"
-               ToolTip="Right Click to open panel..">
+
+    <DockPanel Margin="0,0,10,21" Background="Transparent">
+        <Image Name="image" Source="control-panel3.png" Width="59" VerticalAlignment="Top" HorizontalAlignment="Left" Height="66" RenderTransformOrigin="0.5,0.5" Margin="0,-1,0,-4" Opacity="0.645" 
+        >
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="0.2"/>
+
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>
